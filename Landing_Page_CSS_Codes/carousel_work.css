@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.carousel {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+.client {
+    width: 100%;
+    flex: 0 0 auto;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
