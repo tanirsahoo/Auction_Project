@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auction Item</title>
+    <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/styles.css">
+    <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/login_signup.css">
+    <link rel="stylesheet" href="/Tanir_Frontend_Work/Item_Page_CSS_Codes/style.css">
+</head>
+<body>
+
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Nigga Auction</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Auctions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <form class="search-form" action="#" method="get">
+                        <input type="text" name="search" placeholder="Search items..." class="search-input">
+                        <button type="submit" class="search-button">Search</button>
+                    </form>
+                </li>
+                <li><button id="loginSignupBtn" class="nav-button">Login/Signup</button></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <div class="login-form" id="loginForm">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <button id="toggleSignup">Signup</button></p>
+            </div>
+            <div class="signup-form" id="signupForm">
+                <h2>Signup</h2>
+                <form>
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="tel" placeholder="Contact Number">
+                    <input type="text" placeholder="Address">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+                    <input type="number" placeholder="Top-Up Amount">
+                    <button type="submit">Signup</button>
+                </form>
+                <p>Already have an account? <button id="toggleLogin">Login</button></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <img id="item-image" src="/Tanir_Frontend_Work/Media_Files/item2.png" alt="Item Image" class="item-image">
+        <h1 id="item-title">Nike Shoe</h1>
+        <div class="item-description" id="item-description" style="text-align: left;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, doloribus vitae. Ipsam debitis nesciunt aliquam, impedit fugiat quisquam maiores, et tempora laboriosam nam aspernatur veniam neque iste officia laborum totam assumenda natus! Corporis a nihil dolorum consectetur laboriosam perferendis optio sint alias corrupti, nisi, ex qui? Impedit ut dignissimos possimus.</div>
+        <div class="bid-info">
+            <p>Current Highest Bid: $<span id="current-highest-bid">0.00</span></p>
+        </div>
+        <div class="bid-form">
+            <input type="number" id="bid-amount" placeholder="Enter your bid" step="0.01">
+            <button onclick="placeBid()">Place Bid</button>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/script.js"></script>
+    <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/login_signup.js"></script>
+    <script src="/Tanir_Frontend_Work/Item_Page_JS_Codes/script.js"></script>
+</body>
+</html>

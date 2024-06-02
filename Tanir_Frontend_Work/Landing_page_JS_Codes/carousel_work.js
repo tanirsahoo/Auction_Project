@@ -1,9 +1,9 @@
 const clients = [
-    { name: "", image: "/Media_Files/feedback_sample.jpg" },
-    { name: "", image: "/Media_Files/feedback_sample.jpg" },
-    { name: "", image: "/Media_Files/feedback_sample.jpg" },
-    { name: "", image: "/Media_Files/feedback_sample.jpg" },
-    { name: "", image: "/Media_Files/feedback_sample.jpg" }
+    { name: "", image: "/Tanir_Frontend_Work/Media_Files/feedback_sample.jpg" },
+    { name: "", image: "/Tanir_Frontend_Work/Media_Files/feedback_sample.jpg" },
+    { name: "", image: "/Tanir_Frontend_Work/Media_Files/feedback_sample.jpg" },
+    { name: "", image: "/Tanir_Frontend_Work/Media_Files/feedback_sample.jpg" },
+    { name: "", image: "/Tanir_Frontend_Work/Media_Files/feedback_sample.jpg" }
 ];
 
 const clientsContainer = document.getElementById('clients');

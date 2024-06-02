@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auction Website</title>
+    <title>Auction Item</title>
     <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/styles.css">
     <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/carousel_work.css">
-    <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/login_signup.css">
+    <link rel="stylesheet" href="/Tanir_Frontend_Work/Registered_user_CSS_files/registered.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -23,7 +25,8 @@
                         <button type="submit" class="search-button">Search</button>
                     </form>
                 </li>
-                <li><button id="loginSignupBtn" class="nav-button">Login/Signup</button></li>
+                <li><button id="profileBtn" class="nav-button profile-button">Profile</button></li>
+                <li><button id="logoutBtn" class="nav-button">Logout</button></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -32,35 +35,26 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="popup-container" id="popupContainer">
         <div class="popup-content">
             <span class="close-btn" id="closeBtn">&times;</span>
-            <div class="login-form" id="loginForm">
-                <h2>Login</h2>
+            <div class="profile-form" id="profileForm">
+                <h2>User Profile</h2>
                 <form>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
-                    <button type="submit">Login</button>
+                    <input type="text" placeholder="Username" value="JohnDoe" disabled>
+                    <input type="email" placeholder="Email" value="john.doe@example.com" disabled>
+                    <input type="tel" placeholder="Contact Number" value="123-456-7890" disabled>
+                    <input type="text" placeholder="Address" value="123 Main St" disabled>
+                    <input type="number" placeholder="Top-Up Amount" value="100" disabled>
+                    <input type="text" placeholder="Account Creation Date" value="2024-06-02" disabled>
+                    <button type="button" id="closeProfileBtn">Close</button>
                 </form>
-                <p>Don't have an account? <button id="toggleSignup">Signup</button></p>
-            </div>
-            <div class="signup-form" id="signupForm">
-                <h2>Signup</h2>
-                <form>
-                    <input type="text" placeholder="Username">
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Contact Number">
-                    <input type="text" placeholder="Address">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                    <input type="number" placeholder="Top-Up Amount">
-                    <button type="submit">Signup</button>
-                </form>
-                <p>Already have an account? <button id="toggleLogin">Login</button></p>
             </div>
         </div>
     </div>
+
+
     
     <main>
         <section class="hero">
@@ -173,8 +167,12 @@
             <p>&copy; 2024 Nigga Auction House. All rights reserved.</p>
         </div>
     </footer>
+
+
+
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/script.js"></script>
-    <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/login_signup.js"></script>
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/carousel_work.js"></script>
+    <script src="/Tanir_Frontend_Work/Registered_user_JS_files/registered.js"></script>
 </body>
+
 </html>

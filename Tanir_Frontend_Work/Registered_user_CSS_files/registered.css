@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    transition: background-color 0.5s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    height: 3rem;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.5s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Align items vertically */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links li {
+    margin: 0rem 1rem;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #fff;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #f0f0f0;
+}
+
+.nav-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #777;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+}
+
+.search-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #777;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.item-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.item-description {
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.bid-info {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.bid-form {
+    margin-bottom: 20px;
+}
+
+.bid-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 24px);
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.bid-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bid-form button:hover {
+    background-color: #218838;
+}
+
+#message {
+    margin-top: 20px;
+    color: red;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    .item-description {
+        font-size: 0.9em;
+    }
+    .bid-info {
+        font-size: 1.1em;
+    }
+    .bid-form input {
+        font-size: 18px;
+        padding: 12px;
+        width: calc(100% - 24px);
+    }
+    .bid-form button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    .item-description {
+        font-size: 0.8em;
+    }
+    .bid-info {
+        font-size: 1em;
+    }
+    .bid-form input {
+        font-size: 16px;
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    .bid-form button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.profile-form {
+    display: none;
+}
+.nav-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #4CAF50;
+}
+
+.profile-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-button {
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+}
+.profile-form {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-form h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.profile-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #45a049;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.profile-form {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-form h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.profile-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #45a049;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
