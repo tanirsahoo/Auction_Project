@@ -8,10 +8,13 @@ const toggleLoginBtn = document.getElementById('toggleLogin');
 
 loginSignupBtn.addEventListener('click', function() {
     popupContainer.style.display = 'flex';
+    signupForm.style.display='block';
 });
 
 closeBtn.addEventListener('click', function() {
     popupContainer.style.display = 'none';
+    loginForm.style.display='none';
+    signupForm.style.display='none' ;
 });
 
 document.addEventListener('keydown', function(event) {
