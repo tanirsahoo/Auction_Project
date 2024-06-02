@@ -16,7 +16,7 @@ public class Auction {
     private LocalDateTime endTime;
     private String status;
     private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    //private LocalDateTime updatedAt;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
