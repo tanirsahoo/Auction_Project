@@ -29,8 +29,4 @@ public class AuctionService {
     public void deleteById(Long id) {
         auctionRepository.deleteById(id);
     }
-
-    public Optional<Auction> getAuctionByName(String name) {
-        return auctionRepository.findByName(name);
-    }
 }

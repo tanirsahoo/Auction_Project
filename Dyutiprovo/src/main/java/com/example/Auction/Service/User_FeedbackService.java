@@ -1,7 +1,6 @@
 package com.example.Auction.Service;
 
 
-import com.example.Auction.Model.User;
 import com.example.Auction.Model.UserFeedback;
 import com.example.Auction.Repository.FeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -25,13 +25,6 @@ public class AuctionController {
         return auctionService.findById(id);
     }
     
-    @GetMapping("/{name}")
-    public ResponseEntity<Auction> findByName(@PathVariable String title) {
-        Optional<Auction> auction = auctionService.getAuctionByName(title);
-        return auction.map(ResponseEntity::ok)
-                      .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
     @PostMapping
     public Auction save(@RequestBody Auction auction) {
         return auctionService.save(auction);
