@@ -103,6 +103,7 @@ signupForm.addEventListener('submit', function (event) {
         })
         .catch(error => {
             console.error('Error:', error);
+            alert("Some Problem has occured, Please try again later.");
         });
 });
 
