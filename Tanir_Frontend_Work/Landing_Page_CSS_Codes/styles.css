@@ -110,6 +110,44 @@ header {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 3s ease;
+    z-index: 20;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+  .popup-text {
+    font-size: 16px;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+
 main {
     flex: 1;
 }

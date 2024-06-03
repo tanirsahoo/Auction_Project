@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/carousel_work.css">
     <link rel="stylesheet" href="/Tanir_Frontend_Work/Landing_Page_CSS_Codes/login_signup.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -32,36 +34,40 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="popup-container" id="popupContainer">
         <div class="popup-content">
             <span class="close-btn" id="closeBtn">&times;</span>
             <div class="login-form" id="loginForm">
                 <h2>Login</h2>
-                <form>
-                    <input type="text" placeholder="Username">
-                    <input type="password" placeholder="Password">
+                <form id="loginForm">
+                    <input type="text" id="loginUsername" placeholder="Username">
+                    <input type="password" id="loginPassword" placeholder="Password">
                     <button type="submit">Login</button>
                 </form>
                 <p>Don't have an account? <button id="toggleSignup">Signup</button></p>
             </div>
             <div class="signup-form" id="signupForm">
                 <h2>Signup</h2>
-                <form>
-                    <input type="text" placeholder="Username">
-                    <input type="email" placeholder="Email">
-                    <input type="tel" placeholder="Contact Number">
-                    <input type="text" placeholder="Address">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Confirm Password">
-                    <input type="number" placeholder="Top-Up Amount">
+                <form id="signupForm">
+                    <input type="text" id="signupUsername" placeholder="Username">
+                    <input type="email" id="signupEmail" placeholder="Email">
+                    <input type="tel" id="signupContactNumber" placeholder="Contact Number">
+                    <input type="text" id="signupAddress" placeholder="Address">
+                    <input type="password" id="signupPassword" placeholder="Password">
+                    <input type="password" id="signupConfirmPassword" placeholder="Confirm Password">
+                    <input type="number" id="signupTopUpAmount" placeholder="Top-Up Amount">
                     <button type="submit">Signup</button>
                 </form>
                 <p>Already have an account? <button id="toggleLogin">Login</button></p>
             </div>
         </div>
     </div>
-    
+
+    <div id="popup" class="popup" style="display: none;">
+        <span class="popup-text" id="popupText"></span>
+    </div>
+
     <main>
         <section class="hero">
             <h1>Welcome to the Nigga Auction House</h1>
@@ -117,8 +123,8 @@
                 <button>View More</button>
             </div>
         </section>
-        
-        
+
+
         <!-- This Section Deals with the Carousel -->
         <section class="happy_customers">
             <div class="carousel" id="carousel">
@@ -131,22 +137,22 @@
         <!-- This Section deals with feedback from the Customers -->
         <div class="feedback_beauty">
             <div class="feedback_background_dark"></div>
-        <section class="feedback">
-            <h2>Feedback</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit" class="feed_back_submit_button">Submit</button>
-            </form>
-        </section>
-    </div>
+            <section class="feedback">
+                <h2>Feedback</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="feed_back_submit_button">Submit</button>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-content">
@@ -177,4 +183,5 @@
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/login_signup.js"></script>
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/carousel_work.js"></script>
 </body>
+
 </html>
