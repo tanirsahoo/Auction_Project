@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+//@RequestMapping("/test")
 @RestController
 public class User_FeedbackController {
     @Autowired

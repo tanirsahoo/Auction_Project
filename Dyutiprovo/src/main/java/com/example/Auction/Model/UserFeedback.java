@@ -17,6 +17,6 @@ public class UserFeedback {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long feedbackID ;
     private String email_id ;
-    private String Username ;
+    private String username ;
     private String feedback ;
 }
