@@ -26,7 +26,7 @@ public class Auction {
     private Set<Bid> bids;
 
     @OneToOne
-    @JoinColumn(name = "item_id")
+    @JoinColumn(name = "itemId")
     private Item item;
 
     // Getters and Setters
