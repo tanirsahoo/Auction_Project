@@ -1,0 +1,21 @@
+itemId	Name	                    Description	                                     Starting Price	         Image URL
+
+1	Antique Vase	A beautiful antique vase from the 19th century.	150.0	        http://example.com/images/vase1.jpg
+
+2	Vintage Watch	A classic vintage watch in perfect condition.	300.0	        http://example.com/images/watch1.jpg
+
+3	Leather Jacket	A stylish leather jacket made from genuine leather.	200.0	    http://example.com/images/jacket1.jpg
+
+4	Handmade Necklace	A beautiful handmade necklace with intricate designs.	80.0http://example.com/images/necklace1.jpg
+
+5	Oil Painting	An exquisite oil painting by a renowned artist.	500.0	http://example.com/images/painting1.jpg
+
+6	Ceramic Plate	A decorative ceramic plate with unique patterns.	45.0	http://example.com/images/plate1.jpg
+
+7	Antique Clock	A fully functional antique clock with a wooden frame.	120.0	http://example.com/images/clock1.jpg
+
+8	Wooden Sculpture	A finely carved wooden sculpture.	250.0	http://example.com/images/sculpture1.jpg
+
+9	Silk Scarf	A luxurious silk scarf with elegant designs.	60.0	http://example.com/images/scarf1.jpg
+
+10	Silver Ring	A stunning silver ring with gemstone inlay.	95.0	http://example.com/images/ring1.jpg
