@@ -1,14 +1,3 @@
-// let session_check = sessionStorage.getItem('username_auction_store_logged_in') ;
-// if(session_check !== null){
-//     window.location.href='registered_user.html';
-// }
-// else{
-//     console.log("Not a registered User");
-// }
-
-// sessionStorage.setItem('username_auction_store_logged_in' , 'Registered_user');
-
-
 function setCookie(name, value, days) {
     let expires = "";
     if (days) {
@@ -33,7 +22,7 @@ function deleteCookie(name) {
 }
 
 
-// setCookie('username_auction_store_logged_in' , 'Hello Tanir' , 5) ;
+setCookie('username_auction_store_logged_in' , 'Hello Tanir' , 5) ;
 
 // deleteCookie('username_auction_store_logged_in') ;
 
