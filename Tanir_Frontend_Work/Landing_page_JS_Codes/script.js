@@ -1,4 +1,4 @@
-document.getElementById('mobile-menu').addEventListener('click', function() {
+document.getElementById('mobile-menu').addEventListener('click', function () {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 
@@ -15,7 +15,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 });
 const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.remove('active');
         navLinks.style.maxHeight = null;
@@ -35,22 +35,22 @@ function fetchAuctionData() {
         .then(data => {
             const auctionItem = document.createElement('div');
             auctionItem.classList.add('item');
-            
+
             const img = document.createElement('img');
             img.src = "/Tanir_Frontend_Work/Media_Files/item1.png";
             img.alt = "Item 1";
-            
+
             const h3 = document.createElement('h3');
             h3.textContent = data.title;
-            
+
             const startingBid = document.createElement('p');
             startingBid.classList.add('Starting_bid');
             startingBid.textContent = "Starting Bid: $" + data.startingPrice;
-            
+
             const currentBid = document.createElement('p');
             currentBid.classList.add('Current_bid');
             currentBid.textContent = "Current Highest: $" + (data.currentBid || data.startingPrice);
-            
+
             const button = document.createElement('button');
             button.textContent = "Enter Live Auction";
             auctionItem.appendChild(img);
@@ -63,3 +63,8 @@ function fetchAuctionData() {
         .catch(error => console.error('Error fetching auction data:', error));
 }
 fetchAuctionData();
+
+
+document.getElementById('auction1').addEventListener('click', () => {
+    window.location.href = 'item.html';
+});
