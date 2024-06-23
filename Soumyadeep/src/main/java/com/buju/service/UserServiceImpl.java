@@ -18,20 +18,17 @@ import jakarta.servlet.http.HttpSession;
 
 @Service
 public class UserServiceImpl implements UserService {
-
 	@Autowired
 	private UserRepo userRepo;
-
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
-
 	@Autowired
 	private JavaMailSender mailSender;
-	
 	@Override
 	public User saveUser(User user,String url) {
 
 		String password=passwordEncoder.encode(user.getPassword());
+//		String password=user.getPassword();
 		user.setPassword(password);
 		user.setRole("ROLE_USER");
 

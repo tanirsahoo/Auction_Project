@@ -23,7 +23,6 @@ public class HomeController {
 
 	@Autowired
 	private UserService userService;
-
 	@Autowired
 	private UserRepo userRepo;
 
