@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AuctionRepository extends JpaRepository<Auction, Long> {
     // Additional query methods (if any) can be defined here
+    Optional<Auction> findByTitle(String title);
 }
