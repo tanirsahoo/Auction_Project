@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.buju.entity.User;
 import com.buju.repository.UserRepo;
@@ -17,7 +18,7 @@ import com.buju.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
-@Controller
+@RestController
 public class HomeController {
 
 	@Autowired
@@ -73,10 +74,10 @@ public class HomeController {
 		User u = userService.saveUser(user, url);
 
 		if (u != null) { // System.out.println("save sucess");
-			session.setAttribute("msg", "Register successfully");
+			session.setAttribute("msg", "Registered successfully");
 
 		} else { // System.out.println("error in server");
-			session.setAttribute("msg", "Something wrong server");
+			session.setAttribute("msg", "Something went wrong");
 		}
 
 		return "redirect:/register";
@@ -87,9 +88,9 @@ public class HomeController {
 		boolean f = userService.verifyAccount(code);
 
 		if (f) {
-			m.addAttribute("msg", "Sucessfully your account is verified");
+			m.addAttribute("msg", "Account verified successfully");
 		} else {
-			m.addAttribute("msg", "may be your vefication code is incorrect or already veified ");
+			m.addAttribute("msg", "Incorrect verification code or account already verified");
 		}
 
 		return "message";
