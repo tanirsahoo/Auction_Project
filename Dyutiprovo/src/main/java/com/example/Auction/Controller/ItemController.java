@@ -23,7 +23,7 @@ public class ItemController {
         return itemService.findById(id);
     }
 
-    @PostMapping
+    @PostMapping("/item_update")
     public Item save(@RequestBody Item item) {
         return itemService.save(item);
     }
