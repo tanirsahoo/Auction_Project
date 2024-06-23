@@ -68,3 +68,4 @@ fetchAuctionData();
 document.getElementById('auction1').addEventListener('click', () => {
     window.location.href = 'item.html';
 });
+
