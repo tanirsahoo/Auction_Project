@@ -28,7 +28,6 @@ public class UserController
 			User user = userRepo.findByEmail(email);
 			m.addAttribute("user", user);
 		}
-
 	}
 
     @GetMapping("/profile")
