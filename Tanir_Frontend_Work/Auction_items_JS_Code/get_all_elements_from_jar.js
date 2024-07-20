@@ -24,8 +24,11 @@ function fetchAuctionData() {
                 currentBid.textContent = "Current Highest: $" + 0;
               
                 const button = document.createElement('button');
-                // button.onsubmit = 'item.html' ;
                 button.textContent = "Enter Live Auction";
+                button.addEventListener('click' , () =>{
+                    console.log('clicked') ;
+                    window.location.href = `item.html?item_id=${item['itemId']}` ;
+                }) ;
               
                 auctionItem.appendChild(img);
                 auctionItem.appendChild(h3);

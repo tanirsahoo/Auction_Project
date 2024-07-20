@@ -58,6 +58,10 @@ function fetchAuctionData() {
               
                 const button = document.createElement('button');
                 button.textContent = "Enter Live Auction";
+                button.addEventListener('click' , () =>{
+                    console.log('clicked') ;
+                    window.location.href = `item.html?item_id=${item['itemId']}` ;
+                }) ;
               
                 auctionItem.appendChild(img);
                 auctionItem.appendChild(h3);
@@ -66,6 +70,8 @@ function fetchAuctionData() {
                 auctionItem.appendChild(button);
               
                 document.getElementById('auction_item_add').appendChild(auctionItem);
+                console.log(item);
+                
               }
         })
         .catch(error => console.error('Error fetching auction data:', error));
