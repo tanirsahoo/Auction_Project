@@ -1,12 +1,13 @@
 package com.example.Auction.Model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 
 @Entity
 @Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

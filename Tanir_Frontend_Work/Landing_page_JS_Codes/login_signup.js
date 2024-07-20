@@ -118,3 +118,10 @@ function showPopup(message) {
         popup_success.style.display = 'none';
     }, 3000);
 }
+
+let username = getCookie('username_auction_store_logged_in');
+if (username !== null) {
+    window.location.href = 'registered_user.html' ;
+} else {
+    alert("Not a registered User") ;
+}

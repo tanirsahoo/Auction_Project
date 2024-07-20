@@ -1,4 +1,4 @@
-package com.buju;
+package com.example.Auction;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

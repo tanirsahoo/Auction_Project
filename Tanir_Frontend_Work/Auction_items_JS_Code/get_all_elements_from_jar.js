@@ -1,41 +1,8 @@
-document.getElementById('mobile-menu').addEventListener('click', function () {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
-
-    const bars = document.querySelectorAll('.bar');
-    bars.forEach(bar => {
-        bar.classList.toggle('active');
-    });
-
-    if (navLinks.classList.contains('active')) {
-        navLinks.style.maxHeight = navLinks.scrollHeight + "px";
-    } else {
-        navLinks.style.maxHeight = null;
-    }
-});
-
-
-const navLinks = document.querySelectorAll('.nav-links a');
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('active');
-        navLinks.style.maxHeight = null;
-
-        const bars = document.querySelectorAll('.bar');
-        bars.forEach(bar => {
-            bar.classList.remove('active');
-        });
-    });
-});
-
-
-
 function fetchAuctionData() {
     fetch('http://localhost:5000/items')
         .then(response => response.json())
         .then(data => {
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < data.length; i++) {
                 const item = data[i];
               
                 const auctionItem = document.createElement('div');
@@ -57,6 +24,7 @@ function fetchAuctionData() {
                 currentBid.textContent = "Current Highest: $" + 0;
               
                 const button = document.createElement('button');
+                // button.onsubmit = 'item.html' ;
                 button.textContent = "Enter Live Auction";
               
                 auctionItem.appendChild(img);
@@ -65,18 +33,9 @@ function fetchAuctionData() {
                 auctionItem.appendChild(currentBid);
                 auctionItem.appendChild(button);
               
-                document.getElementById('auction_item_add').appendChild(auctionItem);
+                document.getElementById('items_put_inside_id').appendChild(auctionItem);
               }
         })
         .catch(error => console.error('Error fetching auction data:', error));
 }
 fetchAuctionData();
-
-document.getElementById('view_more_button').addEventListener('click' , () =>{
-    window.location.href = 'auction_items.html' ;
-}) ;
-
-document.getElementById('auction1').addEventListener('click', () => {
-    window.location.href = 'item.html';
-});
-

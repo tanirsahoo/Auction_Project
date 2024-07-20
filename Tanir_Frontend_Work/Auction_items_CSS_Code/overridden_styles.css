@@ -1,0 +1,13 @@
+*{
+    margin: 0 ;
+    padding: 0;
+}
+.items_put_inside{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.items_put_inside div{
+    margin: 1rem 1rem;
+}

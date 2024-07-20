@@ -63,52 +63,11 @@
         </section>
         <section class="auction-items">
             <h2>Current Auctions</h2>
-            <div class="items">
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item1.png" alt="Item 1">
-                    <h3>Antique Vase</h3>
-                    <p class="Starting_bid">Starting Bid: $100</p>
-                    <p class="Current_bid">Current Highest: $150</p>
-                    <button>Enter Live Auction</button>
-                </div>
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item2.png" alt="Item 2">
-                    <h3>Vintage Watch</h3>
-                    <p class="Starting_bid">Starting Bid: $200</p>
-                    <p class="Current_bid">Current Highest: $250</p>
-                    <button>Enter Live Auction</button>
-                </div>
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item3.png" alt="Item 3">
-                    <h3>Art Piece</h3>
-                    <p class="Starting_bid">Starting Bid: $300</p>
-                    <p class="Current_bid">Current Highest: $400</p>
-                    <button>Enter Live Auction</button>
-                </div>
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item1.png" alt="Item 4">
-                    <h3>Rare Coin</h3>
-                    <p class="Starting_bid">Starting Bid: $150</p>
-                    <p class="Current_bid">Current Highest: $250</p>
-                    <button>Enter Live Auction</button>
-                </div>
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item2.png" alt="Item 5">
-                    <h3>Classic Car Model</h3>
-                    <p class="Starting_bid">Starting Bid: $500</p>
-                    <p class="Current_bid">Current Highest: $600</p>
-                    <button>Enter Live Auction</button>
-                </div>
-                <div class="item">
-                    <img src="/Tanir_Frontend_Work/Media_Files/item3.png" alt="Item 6">
-                    <h3>Luxury Handbag</h3>
-                    <p class="Starting_bid">Starting Bid: $400</p>
-                    <p class="Current_bid">Current Highest: $400</p>
-                    <button>Enter Live Auction</button>
-                </div>
+            <div class="items" id="auction_item_add">
+                <!-- items section - The items in the database are displayed here -->
             </div>
             <div class="view-more">
-                <button>View More</button>
+                <button id="view_more_button">View More</button>
             </div>
         </section>
         
@@ -169,6 +128,7 @@
 
 
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/script.js"></script>
+    <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/cookies_work.js"></script>
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/carousel_work.js"></script>
     <script src="/Tanir_Frontend_Work/Registered_user_JS_files/registered.js"></script>
 </body>
