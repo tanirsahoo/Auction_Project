@@ -55,7 +55,7 @@
     </div>
 
 
-    
+
     <main>
         <section class="hero">
             <h1>Welcome to the Nigga Auction House</h1>
@@ -70,8 +70,8 @@
                 <button id="view_more_button">View More</button>
             </div>
         </section>
-        
-        
+
+
         <section class="happy_customers">
             <div class="carousel" id="carousel">
                 <div class="carousel-inner" id="clients">
@@ -79,25 +79,24 @@
             </div>
         </section>
 
-
         <div class="feedback_beauty">
             <div class="feedback_background_dark"></div>
-        <section class="feedback">
-            <h2>Feedback</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit" class="feed_back_submit_button">Submit</button>
-            </form>
-        </section>
-    </div>
+            <section class="feedback">
+                <h2>Feedback</h2>
+                <form onsubmit="feedback_submit(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Feedback:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="feed_back_submit_button">Submit</button>
+                </form>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer-content">

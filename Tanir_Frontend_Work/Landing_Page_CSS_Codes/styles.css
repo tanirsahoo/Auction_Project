@@ -274,9 +274,11 @@ main {
   .feedback_background_dark {
     position: absolute;
     top: 0;
-    height: 2rem;
+    left: 0;
+    height: 100%;
+    width: 100%;
     z-index: 10;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 .feedback {
     max-width: 1200px;

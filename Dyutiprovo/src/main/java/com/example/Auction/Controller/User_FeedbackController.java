@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 //@RequestMapping("/test")
 @RestController
+@RequestMapping("/feedback")
 public class User_FeedbackController {
     @Autowired
     User_FeedbackService userfeedbackservice ;
