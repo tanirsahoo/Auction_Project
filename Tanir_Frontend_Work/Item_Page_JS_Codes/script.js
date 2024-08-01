@@ -30,29 +30,6 @@ function placeBid() {
             return;
         }
 
-        // fetch(`/item/${itemId}/place_bid`, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({ bid_amount: bidAmount })
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         if (data.error) {
-        //             document.getElementById('message').innerText = data.error;
-        //         } else {
-        //             document.getElementById('message').innerText = data.message;
-        //             document.getElementById('current-highest-bid').innerText = data.current_highest_bid.toFixed(2);
-        //             document.getElementById('bid-amount').value = '';
-        //         }
-        //     })
-        //     .catch(error => {
-        //         console.error('Error placing bid:', error);
-        //         document.getElementById('message').innerText = 'Error placing bid.';
-        //     });
-
-
     }
     else {
         alert("You are not a registered user. Please create an account to place your bid.");
