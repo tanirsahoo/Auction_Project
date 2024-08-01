@@ -23,7 +23,7 @@ public class BidController {
         return bidService.findById(id);
     }
 
-    @PostMapping
+    @PostMapping("/place_bid")
     public Bid save(@RequestBody Bid bid) {
         return bidService.save(bid);
     }

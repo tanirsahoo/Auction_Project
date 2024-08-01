@@ -24,7 +24,7 @@
                         <button type="submit" class="search-button">Search</button>
                     </form>
                 </li>
-                <li><button id="loginSignupBtn" class="nav-button">Login/Signup</button></li>
+                <!-- <li><button id="loginSignupBtn" class="nav-button">Login/Signup</button></li> -->
             </ul>
             <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
@@ -74,8 +74,11 @@
             <p>Current Highest Bid: $<span id="current-highest-bid">0.00</span></p>
         </div>
         <div class="bid-form">
-            <input type="number" id="bid-amount" placeholder="Enter your bid" step="0.01">
+            <input type="number" id="bid-amount" placeholder="Enter your bid" step="0.01" required>
             <button onclick="placeBid()">Place Bid</button>
+        </div>
+        <div class="bid-form new_bid_form" id="auction_registered_user">
+            <button onclick="register_bid_request()" id="auction_registered">Register Yourself</button>
         </div>
         <div id="message"></div>
     </div>
@@ -110,5 +113,6 @@
     <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/script.js"></script>
     <!-- <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/login_signup.js"></script> -->
     <script src="/Tanir_Frontend_Work/Item_Page_JS_Codes/script.js"></script>
+    <script src="/Tanir_Frontend_Work/Landing_page_JS_Codes/cookies_work.js"></script>
 </body>
 </html>

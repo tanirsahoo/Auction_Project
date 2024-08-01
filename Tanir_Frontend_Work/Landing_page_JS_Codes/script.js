@@ -85,7 +85,6 @@ document.getElementById('auction1').addEventListener('click', () => {
 });
 
 function feedback_submit(event) {
-    // console.log("inside Feedback Section");
     event.preventDefault();
     let name = document.getElementById('name').value;
     let email = document.getElementById('email').value;
@@ -96,10 +95,6 @@ function feedback_submit(event) {
         username: name,
         feedback: message
     };
-    // console.log(name) ;
-    // console.log(email) ;
-    // console.log(message) ;
-    // console.log(formData) ;
     try {
         fetch('http://localhost:5000/feedback/feedbackin', {
             method: 'POST',

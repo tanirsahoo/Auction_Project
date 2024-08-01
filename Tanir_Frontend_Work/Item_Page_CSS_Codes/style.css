@@ -95,6 +95,12 @@ h1 {
     background-color: #218838;
 }
 
+.new_bid_form button {
+    background-color: #0a33fc;
+}
+.new_bid_form button:hover {
+    background-color: #2145f9da;
+}
 #message {
     margin-top: 20px;
     color: white;

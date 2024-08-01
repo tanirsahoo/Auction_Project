@@ -18,8 +18,8 @@ public class Bid {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bidId;
     private Double amount;
-    private LocalDateTime bidTime;
-    private Boolean isWinning;
+    private LocalDateTime bidTime = LocalDateTime.now();
+//    private Boolean isWinning;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -22,7 +22,7 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private LocalDateTime createdAt;
+    private LocalDateTime createdAt = LocalDateTime.now();
     //private LocalDateTime updatedAt;
     private String role;//bidder or host
 

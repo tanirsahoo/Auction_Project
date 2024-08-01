@@ -23,7 +23,7 @@ public class UserController {
         return userService.findById(id);
     }
 
-    @PostMapping
+    @PostMapping("/submit_info")
     public User save(@RequestBody User user) {
         return userService.save(user);
     }

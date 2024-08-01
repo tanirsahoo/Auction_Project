@@ -5,34 +5,35 @@ const closeBtn = document.getElementById('closeBtn');
 const profileForm = document.getElementById('profileForm');
 const closeProfileBtn = document.getElementById('closeProfileBtn');
 
-profileBtn.addEventListener('click', function() {
+profileBtn.addEventListener('click', function () {
     popupContainer.style.display = 'flex';
     profileForm.style.display = 'block';
 });
 
-logoutBtn.addEventListener('click', function() {
-    // Add your logout logic here
-    console.log('Logging out...');
+logoutBtn.addEventListener('click', function () {
+    console.log('Clicked');
+    deleteCookie('username_auction_store_logged_in');
+    window.location.href = 'index.html';
 });
 
-closeBtn.addEventListener('click', function() {
+closeBtn.addEventListener('click', function () {
     popupContainer.style.display = 'none';
     profileForm.style.display = 'none';
 });
 
-closeProfileBtn.addEventListener('click', function() {
+closeProfileBtn.addEventListener('click', function () {
     popupContainer.style.display = 'none';
     profileForm.style.display = 'none';
 });
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         popupContainer.style.display = 'none';
         profileForm.style.display = 'none';
     }
 });
 
-document.getElementById('mobile-menu').addEventListener('click', function() {
+document.getElementById('mobile-menu').addEventListener('click', function () {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 
@@ -50,7 +51,7 @@ document.getElementById('mobile-menu').addEventListener('click', function() {
 
 const navLinks = document.querySelectorAll('.nav-links a');
 navLinks.forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.remove('active');
         navLinks.style.maxHeight = null;
